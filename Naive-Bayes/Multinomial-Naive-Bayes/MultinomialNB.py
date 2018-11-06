@@ -57,7 +57,6 @@ class MultinomialNB():
         for i in range(len(self.likelihood)):
             for j in range(len(self.likelihood[i])):
                 self.likelihood[i][j] /= total[j]
-        print(self.likelihood)
 
     def predict(self, data):
         temp = [0] * len(self.list_label)
