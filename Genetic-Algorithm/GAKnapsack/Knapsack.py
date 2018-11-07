@@ -1,7 +1,7 @@
 import random
 
 
-class GAknapsack():
+class Knapsack(object):
 
     def __init__(self, weight, value, max, nGen, pCross, pmutasi, nPop):
         self.nGen = nGen
