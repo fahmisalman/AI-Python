@@ -57,15 +57,12 @@ class GAknapsack():
         return sorted(range(len(self.fitness)), key=lambda k: self.fitness[k], reverse=True)
 
     def fit(self):
-
         self.nkrom = len(self.weight)
-
         self.pop = self.genpop(self.nPop, self.nkrom)
-
+        
         for i in range(self.nGen):
 
             self.fitness = []
-
             anak = []
 
             for j in range(self.nPop // 2):
@@ -93,22 +90,3 @@ class GAknapsack():
 
         self.result = self.pop[0]
         self.fitness = self.fitness[0]
-
-
-if __name__ == '__main__':
-
-    nGen = 100
-    nama = ['Nila', 'Gurame', 'Kakap', 'Lele', 'Mujair']
-    weight = [2, 7, 4, 1, 1]
-    value = [50000, 70000, 60000, 15000, 25000]
-    max = 12
-    pCross = 0.8
-    pmutasi = 0.1
-    nPop = 10
-
-    knapsack = GAknapsack(weight, value, max, nGen, pCross, pmutasi, nPop)
-    knapsack.fit()
-    print(knapsack.fitness)
-    for i in range(len(nama)):
-        if knapsack.result[i] == 1:
-            print(nama[i])
