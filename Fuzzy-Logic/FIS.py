@@ -58,6 +58,9 @@ if __name__ == '__main__':
     kelembaban.add('tri', [2, 3, 4], 'sedang')
     kelembaban.add('tri', [3, 4, 5], 'tinggi')
 
-    print(inference(suhu.rule('rendah', 1.2), kelembaban.rule('rendah', 1.4)))
+    ya = []
+    tidak = []
+
+    ya.append(inference(suhu.rule('rendah', 1.2), kelembaban.rule('rendah', 1.4)))
 
 
