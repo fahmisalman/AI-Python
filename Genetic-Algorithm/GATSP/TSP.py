@@ -117,8 +117,8 @@ class TSP(object):
                     anak1 = self.mutasi(anak1)
                     anak2 = self.mutasi(anak2)
 
-                    anak.append(anak1)
-                    anak.append(anak2)
+                anak.append(anak1)
+                anak.append(anak2)
 
             gab = self.pop + anak
             for f in range(len(gab)):
