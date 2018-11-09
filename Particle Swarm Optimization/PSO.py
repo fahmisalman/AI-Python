@@ -67,13 +67,3 @@ class PSO(object):
                         X[j][k] = self.randuniform(-10, 10)
 
         self.min = self.f(self.gbest[0], self.gbest[1])
-        #
-        # print('coordinate   : ', self.gbest)
-        # print('minimum value: ', self.f(self.gbest[0], self.gbest[1]))
-
-
-if __name__ == '__main__':
-    pso = PSO()
-    pso.fit(0.5, 0.3, 20, 100, 2)
-    print(pso.gbest)
-    print(pso.min)
