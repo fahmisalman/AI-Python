@@ -61,6 +61,6 @@ if __name__ == '__main__':
     ya = []
     tidak = []
 
-    ya.append(inference(suhu.rule('rendah', 1.2), kelembaban.rule('rendah', 1.4)))
+    ya.append(inference(suhu.rule('rendah', 2), kelembaban.rule('rendah', 2)))
 
 
