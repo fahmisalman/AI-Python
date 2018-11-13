@@ -44,23 +44,3 @@ class FIS(object):
 
 def inference(x1, x2):
     return min(x1, x2)
-
-
-if __name__ == '__main__':
-
-    suhu = FIS('Suhu')
-    suhu.add('tri', [1, 2, 3], 'rendah')
-    suhu.add('tri', [2, 3, 4], 'sedang')
-    suhu.add('tri', [3, 4, 5], 'tinggi')
-
-    kelembaban = FIS('Kelembaban')
-    kelembaban.add('tri', [1, 2, 3], 'rendah')
-    kelembaban.add('tri', [2, 3, 4], 'sedang')
-    kelembaban.add('tri', [3, 4, 5], 'tinggi')
-
-    ya = []
-    tidak = []
-
-    ya.append(inference(suhu.rule('rendah', 2), kelembaban.rule('rendah', 2)))
-
-
