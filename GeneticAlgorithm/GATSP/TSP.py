@@ -6,12 +6,12 @@ import math
 
 class TSP(object):
 
-    def __init__(self, node, nGen, nPop, pCross, pMutasi):
-        self.nGen = nGen
-        self.nPop = nPop
+    def __init__(self, node):
+        self.nGen = 0
+        self.nPop = 0
         self.node = node
-        self.pCross = pCross
-        self.pMutasi = pMutasi
+        self.pCross = 0
+        self.pMutasi = 0
         self.pop = []
         self.fitness = 0
         self.jarak = 0
@@ -91,7 +91,12 @@ class TSP(object):
             krom[titik1], krom[titik2] = krom[titik2], krom[titik1]
         return krom
 
-    def fit(self):
+    def fit(self, nGen=100, pCross=0.8, pmutasi=0.2, nPop=20):
+
+        self.nGen = nGen
+        self.pCross = pCross
+        self.pMutasi = pmutasi
+        self.nPop = nPop
 
         self.pop = self.genpop(self.nPop, len(self.node))
 

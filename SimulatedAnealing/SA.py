@@ -6,8 +6,8 @@ import random
 class SA(object):
 
     def __init__(self):
-        self.temperature = 10000
-        self.coolingrate = 0.999
+        self.temperature = 0
+        self.coolingrate = 0
         self.bestsolution = 0
         self.bestevaluation = 0
 
@@ -24,7 +24,7 @@ class SA(object):
         x += value
         return x
 
-    def fit(self, temperature, coolingrate):
+    def fit(self, temperature=10000, coolingrate=0.999):
         self.temperature = temperature
         self.coolingrate = coolingrate
 

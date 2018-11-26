@@ -4,12 +4,12 @@ import random
 class Knapsack(object):
 
     def __init__(self, weight, value, max, nGen, pCross, pmutasi, nPop):
-        self.nGen = nGen
+        self.nGen = 0
         self.weight = weight
         self.value = value
-        self.pCross = pCross
-        self.pmutasi = pmutasi
-        self.nPop = nPop
+        self.pCross = 0
+        self.pmutasi = 0
+        self.nPop = 0
         self.max = max
         self.result = 0
         self.fitness = []
@@ -56,7 +56,13 @@ class Knapsack(object):
     def sort_fitness(self):
         return sorted(range(len(self.fitness)), key=lambda k: self.fitness[k], reverse=True)
 
-    def fit(self):
+    def fit(self, nGen=100, pCross=0.8, pmutasi=0.2, nPop=20):
+
+        self.nGen = nGen
+        self.pCross = pCross
+        self.pmutasi = pmutasi
+        self.nPop = nPop
+
         self.nkrom = len(self.weight)
         self.pop = self.genpop(self.nPop, self.nkrom)
         
