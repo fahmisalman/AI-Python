@@ -4,11 +4,11 @@ import numpy as np
 class PSO(object):
 
     def __init__(self):
-        self.cognition = 0.5
-        self.social = 0.3
-        self.nparticle = 20
-        self.iteration = 100
-        self.vmax = 2
+        self.cognition = 0
+        self.social = 0
+        self.nparticle = 0
+        self.iteration = 0
+        self.vmax = 0
         self.gbest = []
         self.min = 0
 
@@ -32,7 +32,7 @@ class PSO(object):
             vc.append(tmp if (-self.vmax <= tmp <= self.vmax) else (tmp / abs(tmp)) * self.vmax)
         return vc
 
-    def fit(self, cognition, social, n_particle, iteration, vmax):
+    def fit(self, cognition=0.5, social=0.3, n_particle=20, iteration=100, vmax=2):
         X = []
         P = []
         V = []
