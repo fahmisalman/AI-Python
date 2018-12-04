@@ -7,7 +7,7 @@ class KMeans(object):
     def __init__(self):
         self.centroid = []
         self.error = []
-        self.index = []
+        self.label = []
         np.random.seed(seed=1)
 
     def initialize_centroid(self, k, minx, miny, rangex, rangey):
@@ -61,14 +61,14 @@ class KMeans(object):
         while start != stop:
 
             start = stop
-            self.index = []
+            self.label = []
             for i in range(len(data)):
                 distance = []
                 for j in range(len(centroid)):
                     distance.append(math.sqrt(sum([(a - b) ** 2 for a, b in zip(data[i],
                                                                                 centroid[j])])))
-                self.index.append(distance.index(min(distance)))
+                self.label.append(distance.index(min(distance)))
 
-            self.centroid = self.new_centroid(self.centroid, data, self.index)
-            self.error = self.sse(self.centroid, data, self.index)
+            self.centroid = self.new_centroid(self.centroid, data, self.label)
+            self.error = self.sse(self.centroid, data, self.label)
             stop = self.sum_centroid(self.centroid)
