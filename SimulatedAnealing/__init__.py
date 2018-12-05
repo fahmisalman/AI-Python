@@ -3,7 +3,7 @@ import math
 import random
 
 
-class SA(object):
+class MinimumFunction(object):
 
     def __init__(self):
         self.temperature = 0
