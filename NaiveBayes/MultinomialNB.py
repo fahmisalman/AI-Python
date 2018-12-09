@@ -2,8 +2,6 @@ import numpy as np
 import math
 import os
 
-os.chdir('../..')
-
 
 class MultinomialNB(object):
 
@@ -11,6 +9,7 @@ class MultinomialNB(object):
         self.prior = []
         self.likelihood = []
         self.list_label = []
+        os.chdir('../..')
 
     def load_dataset(self, data):
         temp = np.loadtxt(open("%s/Sample-Datasets/%s.csv" % (os.path.abspath(os.curdir), data), "r"), delimiter=",")
