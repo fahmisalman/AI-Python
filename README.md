@@ -2,10 +2,18 @@
 
 Implementation of AI algorithm from scratch
 
-Include
+## Classification
 - Naïve Bayes
 - Artificial Neural Network
+- k-Nearest Neighbors
+
+## Clustering
+- K-Means
+
+## Searching & optimization
 - Genetic Algorithm
 - Simulated Annealing
-- k-Nearest Neighbors
 - Particle Swarm Optimization
+
+## Reasoning
+- Fuzzy Logic
